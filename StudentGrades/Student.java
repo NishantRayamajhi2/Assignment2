@@ -2,30 +2,41 @@
 /**
  * Write a description of class Student here.
  *
- * @author (your name)
+ * @author (Nishant Rayamajhi)
  * @version (a version number or a date)
  */
-public class Student
-{
-    private String lastName;
-    private String firstName;
-    private int StudentID;
-    private double a1, a2, a3;
-    
-    public Student(String lastName,String firstName,int StudentID,  double a1, double a2, double a3){
-        this.lastName=lastName;
-        this.firstName=firstName;
-        this.StudentID=StudentID;
-        this.a1=a1;
-        this.a2=a2;
-        this.a3=a3;
+public class Student {
+    private String name;
+    private String id;
+    private int mark1, mark2, mark3;
+    private int totalMarks;
+
+    // Constructor
+    public Student(String name, String id, int mark1, int mark2, int mark3) {
+        this.name = name;
+        this.id = id;
+        this.mark1 = mark1;
+        this.mark2 = mark2;
+        this.mark3 = mark3;
+        this.totalMarks = mark1 + mark2 + mark3;
     }
-    public double getTotalMarks(){
-        double total = a1+a2+a3;
-        return total;
+
+    // Getters for attributes
+    public String getName() {
+        return name;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public int getTotalMarks() {
+        return totalMarks;
+    }
+
+    // Display details
     @Override
-    public String toString(){
-        return String.format("%10  ")
+    public String toString() {
+        return String.format("%-15s %-10s %-5d %-5d %-5d %-5d", name, id, mark1, mark2, mark3, totalMarks);
     }
 }
