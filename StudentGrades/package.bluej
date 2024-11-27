@@ -1,8 +1,11 @@
 #BlueJ package file
-editor.fx.0.height=732
-editor.fx.0.width=800
-editor.fx.0.x=560
-editor.fx.0.y=103
+dependency1.from=StudentsGrade
+dependency1.to=Student
+dependency1.type=UsesDependency
+editor.fx.0.height=1040
+editor.fx.0.width=1920
+editor.fx.0.x=0
+editor.fx.0.y=0
 objectbench.height=94
 objectbench.width=776
 package.divider.horizontal=0.6
@@ -13,7 +16,7 @@ package.editor.x=20
 package.editor.y=20
 package.frame.height=600
 package.frame.width=800
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
 package.showUses=true

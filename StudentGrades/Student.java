@@ -7,36 +7,55 @@
  */
 public class Student {
     private String name;
-    private String id;
-    private int mark1, mark2, mark3;
+    private String studentId;
+    private int[] marks; // Array to store marks for three assignments
     private int totalMarks;
 
     // Constructor
-    public Student(String name, String id, int mark1, int mark2, int mark3) {
+    public Student(String name, String studentId, int[] marks) {
         this.name = name;
-        this.id = id;
-        this.mark1 = mark1;
-        this.mark2 = mark2;
-        this.mark3 = mark3;
-        this.totalMarks = mark1 + mark2 + mark3;
+        this.studentId = studentId;
+        this.marks = marks;
+        this.totalMarks = calculateTotalMarks();
     }
 
-    // Getters for attributes
+    // Method to calculate total marks
+    private int calculateTotalMarks() {
+        int total = 0;
+        for (int mark : marks) {
+            total += mark;
+        }
+        return total;
+    }
+
+    // Getter for name
     public String getName() {
         return name;
     }
 
-    public String getId() {
-        return id;
+    // Getter for studentId
+    public String getStudentId() {
+        return studentId;
     }
 
+    // Getter for marks
+    public int[] getMarks() {
+        return marks;
+    }
+
+    // Getter for totalMarks
     public int getTotalMarks() {
         return totalMarks;
     }
 
-    // Display details
-    @Override
-    public String toString() {
-        return String.format("%-15s %-10s %-5d %-5d %-5d %-5d", name, id, mark1, mark2, mark3, totalMarks);
+    // Display student details
+    public void displayStudentDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Student ID: " + studentId);
+        System.out.print("Marks: ");
+        for (int mark : marks) {
+            System.out.print(mark + " ");
+        }
+        System.out.println("\nTotal Marks: " + totalMarks);
     }
 }
