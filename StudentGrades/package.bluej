@@ -1,5 +1,5 @@
 #BlueJ package file
-dependency1.from=StudentsGrade
+dependency1.from=StudentsMark
 dependency1.to=Student
 dependency1.type=UsesDependency
 editor.fx.0.height=1040
@@ -27,7 +27,7 @@ readme.width=49
 readme.x=10
 readme.y=10
 target1.height=70
-target1.name=StudentsGrade
+target1.name=StudentsMark
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=120
