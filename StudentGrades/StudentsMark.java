@@ -34,7 +34,7 @@ public class StudentsMark {
                     int mark1 = Integer.parseInt(parts[2].trim());
                     int mark2 = Integer.parseInt(parts[3].trim());
                     int mark3 = Integer.parseInt(parts[4].trim());
-                    students.add(new Student(name, id, mark1, mark2, mark3));
+                    students.add(new Student(name, id, mark1, mark2, mar3));
                 }
             }
         } catch (IOException e) {
