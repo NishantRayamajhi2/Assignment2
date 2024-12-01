@@ -61,7 +61,7 @@ public class StudentsMark {
 
     // Display top 5 and bottom 5 students
     public void displayTopAndBottom5Students() {
-        students.sort((s1, s2) -> Integer.compare(s2.getTotalMarks(), s1.getTotalMarks()));
+        students.sort((s1, s2) -> Integer.comare(s2.getTotalMarks(), s1.getTotalMarks()));
         System.out.println("\nTop 5 Students:");
         for (int i = 0; i < Math.min(5, students.size()); i++) {
             System.out.println(students.get(i));
