@@ -1,61 +1,54 @@
-
-/**
- * Write a description of class Student here.
- *
- * @author (Nishant Rayamajhi)
- * @version (a version number or a date)
- */
+// Student.java
 public class Student {
-    private String name;
-    private String studentId;
-    private int[] marks; // Array to store marks for three assignments
-    private int totalMarks;
+    private String lastName;
+    private String firstName;
+    private String studentID;
+    private double[] marks;
+    private double totalMarks;
 
-    // Constructor
-    public Student(String name, String studentId, int[] marks) {
-        this.name = name;
-        this.studentId = studentId;
+    // Constructor to initialize student details
+    public Student(String lastName, String firstName, String studentID, double[] marks) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.studentID = studentID;
         this.marks = marks;
         this.totalMarks = calculateTotalMarks();
     }
 
-    // Method to calculate total marks
-    private int calculateTotalMarks() {
-        int total = 0;
-        for (int mark : marks) {
+    // Calculate total marks from the three assignments
+    private double calculateTotalMarks() {
+        double total = 0;
+        for (double mark : marks) {
             total += mark;
         }
         return total;
     }
 
-    // Getter for name
-    public String getName() {
-        return name;
+    // Getters for student details
+    public String getLastName() {
+        return lastName;
     }
 
-    // Getter for studentId
-    public String getStudentId() {
-        return studentId;
+    public String getFirstName() {
+        return firstName;
     }
 
-    // Getter for marks
-    public int[] getMarks() {
+    public String getStudentID() {
+        return studentID;
+    }
+
+    public double[] getMarks() {
         return marks;
     }
 
-    // Getter for totalMarks
-    public int getTotalMarks() {
+    public double getTotalMarks() {
         return totalMarks;
     }
 
-    // Display student details
-    public void displayStudentDetails() {
-        System.out.println("Name: " + name);
-        System.out.println("Student ID: " + studentId);
-        System.out.print("Marks: ");
-        for (int mark : marks) {
-            System.out.print(mark + " ");
-        }
-        System.out.println("\nTotal Marks: " + totalMarks);
+    // Override toString method to print student details
+    @Override
+    public String toString() {
+        return String.format("%s, %s (%s): A1=%.1f, A2=%.1f, A3=%.1f, Total=%.1f",
+                lastName, firstName, studentID, marks[0], marks[1], marks[2], totalMarks);
     }
 }
